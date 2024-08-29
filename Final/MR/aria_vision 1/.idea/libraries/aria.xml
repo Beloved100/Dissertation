@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="aria">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/aria_vision/lib/aria/ArNetworking.jar!/" />
+      <root url="jar://$PROJECT_DIR$/aria_vision/lib/aria/Aria.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

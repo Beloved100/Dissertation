@@ -1,0 +1,26 @@
+﻿package roomba.robot;
+
+/**
+ * Created by Theo Theodoridis.
+ * Class    : Behaviour
+ * Version  : v1.0
+ * Date     : © Copyright 20-01-2015
+ * User     : ttheod
+ * email    : ttheod@gmail.com
+ * Comments : The class contains machine behaviour methods that control the robot.
+ **/
+
+public class Behaviour
+{
+   /**
+    * Method     : Behaviour::Behaviour()
+    * Purpose    : Default Behaviour class constructor.
+    * Parameters : x : An object of the Behaviour class.
+    * Returns    : Nothing.
+    * Notes      : None.
+    **/
+    public Behaviour()
+    {
+
+    }
+}

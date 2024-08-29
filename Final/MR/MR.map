@@ -1,0 +1,59 @@
+2D-Map
+Resolution: 0
+LineMinPos: -5141 -3699
+LineMaxPos: -679 5249
+NumLines: 28
+LinesAreSorted: true
+MapInfo: DockType "Name=Dock" "Label=Dock" "NameRequired=1" "Color0=0xffff00" "Color1=0x000000" "Color2=0x000000" "Heading=Required"
+MapInfo: GoalType "Name=Goal" "Label=Goal" "NameRequired=1" "Color0=0x008080" "Color1=0x00ffff" "Color2=0x008080"
+MetaInfo: Rotation "Value=0"
+MetaInfo: Feature "Name=changeprocessing"
+RouteInfo: EveryBefore "_everyBefore"
+RouteInfo: EveryAfter "_everyAfter"
+SchedInfo: Current "_Friday"
+SchedInfo: Current "_Monday"
+SchedInfo: Current "_Saturday"
+SchedInfo: Current "_Sunday"
+SchedInfo: Current "_Thursday"
+SchedInfo: Current "_Tuesday"
+SchedInfo: Current "_Wednesday"
+Cairn: ForbiddenArea 0 0 0.000000 "" ICON "" -5149 3063 -3804 3663
+Cairn: ForbiddenArea 0 0 0.000000 "" ICON "" -5138 -648 -1679 105
+Cairn: RobotHome -4787 431 90.000000 "" ICON ""
+Cairn: GoalWithHeading -4710 -3385 -90.000000 "" ICON "Goal 2"
+Cairn: ForbiddenArea 0 0 0.000000 "" ICON "" -4352 98 -3804 578
+Cairn: ForbiddenArea 0 0 0.000000 "" ICON "" -3812 100 -2432 2050
+Cairn: ForbiddenArea 0 0 0.000000 "" ICON "" -3676 -3045 -2982 -2368
+Cairn: ForbiddenArea 0 0 -90.000000 "" ICON "" -3667 -1885 -98 -1678
+Cairn: GoalWithHeading -1300 -1446 180.000000 "" ICON "Goal 1"
+Cairn: ForbiddenArea 0 0 -90.000000 "" ICON "" 2293 -1579 3689 -683
+LINES
+-5141 -3690 -5141 -660
+-5141 -3690 -681 -3690
+-5141 -660 -5141 3660
+-5141 3060 -3791 3060
+-5141 3660 -3791 3660
+-5140 -660 -1681 -660
+-5137 100 -1677 100
+-4362 100 -4362 600
+-4362 600 -3812 600
+-3826 3660 -2606 3660
+-3812 100 -3812 2050
+-3812 2050 -2432 2050
+-3792 3059 -3792 3660
+-3682 -3051 -3682 -2351
+-3682 -3051 -2982 -3051
+-3682 -2351 -2982 -2351
+-3199 3659 -3199 5249
+-3199 5248 -679 5248
+-3010 1765 -3010 1765
+-2982 -3051 -2982 -2351
+-2432 100 -2432 2050
+-1881 110 -1881 3660
+-1881 3660 -1681 3660
+-1681 -660 -1681 3660
+-1581 -3688 -1581 -2288
+-1581 -2289 -681 -2289
+-681 -3699 -681 3661
+-680 3647 -680 5249
+DATA

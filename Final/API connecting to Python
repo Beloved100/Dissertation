@@ -1,0 +1,61 @@
+<?php
+// Database credentials
+$host = 'localhost';
+$db = '';
+$user = '';
+$pass = '';
+$charset = 'utf8mb4';
+
+// DSN (Data Source Name) for PDO
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+
+try {
+    // Create a PDO instance
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+    // Handle connection error
+    header('HTTP/1.1 500 Internal Server Error');
+    echo json_encode(['status' => 'error', 'message' => 'Database connection failed']);
+    exit;
+}
+
+// Check if the request method is POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Get the JSON data from the POST request
+    $json = file_get_contents('php://input');
+    $data = json_decode($json, true);
+    
+    // Check if gesture data is available
+    if (isset($data['gesture'])) {
+        $gesture = $data['gesture'];
+        
+        // Prepare the SQL statement to insert gesture data into the database
+        $stmt = $pdo->prepare("UPDATE gestures SET gesture= :gesture where id='1'");
+        try {
+            // Execute the prepared statement with the gesture data
+            $stmt->execute(['gesture' => $gesture]);
+            
+            // Send a response back to the client
+            header('Content-Type: application/json');
+            echo json_encode(['status' => 'success', 'message' => "Gesture '$gesture' saved to database."]);
+        } catch (\PDOException $e) {
+            // Handle SQL execution error
+            header('HTTP/1.1 500 Internal Server Error');
+            echo json_encode(['status' => 'error', 'message' => 'Failed to save gesture data']);
+        }
+    } else {
+        // Handle the case where gesture data is not provided
+        header('HTTP/1.1 400 Bad Request');
+        echo json_encode(['status' => 'error', 'message' => 'Gesture data not provided.']);
+    }
+} else {
+    // Handle the case where the request method is not POST
+    header('HTTP/1.1 405 Method Not Allowed');
+    echo json_encode(['status' => 'error', 'message' => 'Only POST requests are allowed.']);
+}
+?>

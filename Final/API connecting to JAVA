@@ -1,0 +1,45 @@
+<?php
+// Set the content type to application/json
+header('Content-Type: application/json');
+
+// Database credentials
+$host = 'localhost';
+$db = '';
+$ user = '';
+$pass = '';
+$charset = 'utf8mb4';
+
+// DSN (Data Source Name) for PDO
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+
+try {
+    // Create a PDO instance
+    $pdo = new PDO($dsn, $user, $pass, $options);
+    
+    
+            
+            // Fetch the latest gesture status from the database
+            $stmt = $pdo->query("SELECT gesture FROM gestures");
+            $latestGesture = $stmt->fetchColumn();
+            
+            // Create a response array
+            $response = [
+                'status' => $latestGesture,
+            ];
+            
+            // Send the response back to the client
+            echo json_encode($response);
+            
+} catch (\PDOException $e) {
+    // Handle connection error
+    http_response_code(500);
+    echo json_encode(['status' => 'error', 'message' => 'Database connection failed']);
+    exit;
+}
+
+?>
