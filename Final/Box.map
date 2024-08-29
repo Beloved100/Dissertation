@@ -1,0 +1,43 @@
+2D-Map
+Resolution: 0
+LineMinPos: -1000 -1000
+LineMaxPos: 6295 4653
+NumLines: 15
+LinesAreSorted: true
+MapInfo: DockType "Name=Dock" "Label=Dock" "NameRequired=1" "Color0=0xffff00" "Color1=0x000000" "Color2=0x000000" "Heading=Required"
+MapInfo: GoalType "Name=Goal" "Label=Goal" "NameRequired=1" "Color0=0x008080" "Color1=0x00ffff" "Color2=0x008080"
+MetaInfo: Rotation "Value=0"
+MetaInfo: Feature "Name=changeprocessing"
+RouteInfo: EveryBefore "_everyBefore"
+RouteInfo: EveryAfter "_everyAfter"
+SchedInfo: Current "_Friday"
+SchedInfo: Current "_Monday"
+SchedInfo: Current "_Saturday"
+SchedInfo: Current "_Sunday"
+SchedInfo: Current "_Thursday"
+SchedInfo: Current "_Tuesday"
+SchedInfo: Current "_Wednesday"
+Cairn: RobotHome 0 0 0.000000 "" ICON "" -8 6 -8 6
+Cairn: RobotHome 0 0 0.000000 "" ICON "Home"
+Cairn: RobotHome 0 0 0.000000 "" ICON "" 998 1001 998 1001
+Cairn: RobotHome 0 0 0.000000 "" ICON "" 1005 999 1005 999
+Cairn: RobotHome 0 0 0.000000 "" ICON "" 1017 999 1017 999
+Cairn: Goal 3000 3000 0.000000 "" ICON "Goal"
+Cairn: RobotHome 0 0 0.000000 "" ICON "" 6780 1188 6780 1188
+LINES
+-1000 -1000 -1000 4000
+-1000 -1000 4000 -1000
+-1000 4000 4000 4000
+1000 1000 1000 2000
+1000 2000 2000 2000
+1341 3072 1341 3072
+1942 1617 1942 1617
+2000 1000 1000 1000
+2000 2000 2000 1000
+3175 1607 3175 1607
+3618 2693 3618 2693
+4000 4000 4000 -1000
+4988 3378 4988 3378
+5620 4653 5620 4653
+6295 3019 6295 3019
+DATA
